@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Hackathon 2026</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Faculty Hackathon 2026</h1>
+        <p>Innovate, Code, and Build the Future in 24 Hours!</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About</a> | 
+        <a href="#schedule">Schedule</a> | 
+        <a href="#register">Register</a>
+    </nav>
+
+    <hr>
+
+    <!-- About the Event -->
+    <section id="about">
+        <h2>About the Event</h2>
+        
+        <article>
+            <h3>Keynote Speaker: Dr. Marsya</h3>
+            <p>Dr. Marsya is an AI research scientist and will be sharing insights on modern AI application development.</p>
+        </article>
+
+        <article>
+            <h3>Featured Activity: Web Development Challenge</h3>
+            <p>Participants will work in teams of four to create fully functional, semantic HTML and web applications targeting real-world community challenges.</p>
+        </article>
+    </section>
+
+    <hr>
+
+    <!-- Event Schedule -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        
+        <table border="1">
+	   <thead>
+               <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+
+	    </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 AM - 09:00 AM</td>
+                    <td>Registration & Keynote Address</td>
+                    <!-- rowspan used here for consecutive sessions in the same venue -->
+                    <td rowspan="2">Main Auditorium</td>
+                    <td>Dr. Marsya</td>
+                </tr>
+                <tr>
+                    <td>09:00 AM - 12:00 PM</td>
+                    <td>Morning Hacking Session</td>
+                    <td>Prof. Patrick Jane</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM - 01:30 PM</td>
+                    <!-- colspan used here to span across activity, venue, and PIC -->
+                    <td colspan="3">Lunch Break & Networking</td>
+                </tr>
+                <tr>
+                    <td>01:30 PM - 04:30 PM</td>
+                    <td>Afternoon Hacking Session</td>
+                    <td>Computer Lab 1</td>
+                    <td>Mentor Team A</td>
+                </tr>
+                <tr>
+                    <td>04:30 PM - 06:00 PM</td>
+                    <td>Project Submissions & Demos</td>
+                    <td>Computer Lab 1</td>
+                    <td>Judging Panel</td>
+                </tr>
+                <tr>
+                    <td>06:00 PM - 07:00 PM</td>
+                    <td>Closing Ceremony & Awards</td>
+                    <td>Main Auditorium</td>
+                    <td>Organising Committee</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- Section 3: Registration Form -->
+    <section id="register">
+        <h2>Registration Form</h2>
+
+        <form action="register.html" method="post">
+            <!-- Text Inputs with Matching Labels -->
+            <p>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required>
+            </p>
+
+            <p>
+                <label for="matric">Matric Number:</label><br>
+                <input type="text" id="matric" name="matric" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <!-- Radio Buttons (Same name attribute to ensure single selection) -->
+            <p>
+                <label>Year of Study:</label><br>
+                <input type="radio" id="year1" name="year_of_study" value="1">
+                <label for="year1">Year 1</label><br>
+                
+                <input type="radio" id="year2" name="year_of_study" value="2">
+                <label for="year2">Year 2</label><br>
+                
+                <input type="radio" id="year3" name="year_of_study" value="3">
+                <label for="year3">Year 3</label><br>
+                
+                <input type="radio" id="year4" name="year_of_study" value="4">
+                <label for="year4">Year 4</label>
+            </p>
+
+            <!-- Checkboxes (At least 3 choices) -->
+            <p>
+                <label>Sessions to Join:</label><br>
+                <input type="checkbox" id="sess1" name="sessions" value="keynote">
+                <label for="sess1">Keynote Address</label><br>
+
+                <input type="checkbox" id="sess2" name="sessions" value="morning_hack">
+                <label for="sess2">Morning Hacking Session</label><br>
+
+                <input type="checkbox" id="sess3" name="sessions" value="afternoon_hack">
+                <label for="sess3">Afternoon Hacking Session</label><br>
+
+                <input type="checkbox" id="sess4" name="sessions" value="closing">
+                <label for="sess4">Closing Ceremony</label>
+            </p>
+
+            <!-- Drop-down List (At least 4 options) -->
+            <p>
+                <label for="programme">Programme / Faculty:</label><br>
+                <select id="programme" name="programme">
+                    <option value="cs">Computer Science</option>
+                    <option value="se">Software Engineering</option>
+                    <option value="it">Information Technology</option>
+                    <option value="ds">Data Science</option>
+                </select>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <input type="submit" value="Register Now">
+            </p>
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Organised by Faculty of Computing &copy; 2026. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
