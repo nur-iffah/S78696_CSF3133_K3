@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Terengganu - Tourism Promotion</title>
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Internal CSS for Page-Specific Heading Decorations -->
+  <style type="text/css">
+    h1 {
+      text-decoration: overline;
+      font-size: 32px;
+    }
+    h2 {
+      text-decoration: underline;
+      color: #006994;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Visit Terengganu 2026</h1>
+    <p>Discover Stunning Islands, Rich Culture, and Delicious Local Cuisine</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#video">Promo Video</a></li>
+      <li><a href="#trip">Book a Trip</a></li>
+    </ul>
+  </nav>
+
+  <!-- Destinations Section -->
+  <section id="destinations">
+    <h2>Top Promotion Destinations</h2>
+
+    <article class="card">
+      <h3>Pulau Redang Snorkeling Escape</h3>
+      <p>Crystal clear waters, white sandy beaches, and vibrant coral reefs await you on a 3D2N island getaway.</p>
+      <p>Promotion Price: <span class="old-price">RM 399</span> <span class="price">RM 279</span></p>
+    </article>
+
+    <article class="card">
+      <h3>Kenyir Lake Houseboat Adventure</h3>
+      <p>Explore Southeast Asia's largest man-made lake, waterfalls, and tropical rainforest sanctuaries.</p>
+      <p>Promotion Price: <span class="old-price">RM 299</span> <span class="price">RM 199</span></p>
+    </article>
+
+    <article class="card">
+      <h3>Kuala Terengganu Heritage &amp; Food Trail</h3>
+      <p>Visit the Crystal Mosque, Pasar Payang, and taste authentic keropok lekor and nasi dagang.</p>
+      <p>Promotion Price: <span class="old-price">RM 150</span> <span class="price">RM 99</span></p>
+    </article>
+
+    <!-- Seat Availability Meter -->
+    <p>
+      <label for="seats">Student Promo Seats Filled (28/40): </label>
+      <meter id="seats" min="0" max="40" value="28">28 out of 40</meter>
+    </p>
+  </section>
+
+  <!-- Promotional Video Section -->
+  <section id="video">
+    <h2>Experience Terengganu</h2>
+    <figure>
+      <video width="640" height="360" controls>
+        <source src="terengganu.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>Video: Highlights of Terengganu's islands, heritage, and local hospitality.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Trip Interest Form Section -->
+  <section id="trip">
+    <h2>Register Your Trip Interest</h2>
+    <form class="trip-form" action="">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">E-mail Address:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <p><strong>Traveller Type:</strong></p>
+      <label><input type="radio" name="traveller" value="student" checked> Student</label>
+      <label><input type="radio" name="traveller" value="staff"> Staff</label>
+      <label><input type="radio" name="traveller" value="public"> Public</label>
+
+      <p><strong>Interests:</strong></p>
+      <label><input type="checkbox" name="interest" value="islands"> Islands</label>
+      <label><input type="checkbox" name="interest" value="food"> Food</label>
+      <label><input type="checkbox" name="interest" value="culture"> Culture</label>
+      <label><input type="checkbox" name="interest" value="nature"> Nature</label>
+      <br><br>
+
+      <input type="submit" value="Submit Trip Inquiry">
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2026 Visit Terengganu Tourism Office</p>
+    <address>
+      Contact us at: <a href="mailto:tourism@terengganu.gov.my">tourism@terengganu.gov.my</a>
+    </address>
+  </footer>
+
+</body>
+</html>

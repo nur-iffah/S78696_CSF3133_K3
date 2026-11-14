@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Exercise 4 - Responsive Webpage</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Internal CSS -->
+  <style type="text/css">
+    h1 {
+      text-decoration: overline;
+    }
+    h2 {
+      text-decoration: underline;
+      color: #2c3e50;
+    }
+    .promo-strike {
+      text-decoration: line-through;
+      color: #888;
+    }
+    video {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+      border-radius: 4px;
+    }
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Webpage</h1>
+    <p>HTML5 &amp; CSS Responsive Lab Project</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#register">Register</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <article>
+      <h2>About This Page</h2>
+      <p>This webpage demonstrates semantic HTML5 tags, embedded video, and internal + external CSS styling.</p>
+      <p>Course Fee: <span class="promo-strike">RM 100</span> <strong>Free for Students!</strong></p>
+    </article>
+  </section>
+
+  <section id="media">
+    <h2>Featured Video</h2>
+    <figure>
+      <video width="400" height="300" controls>
+        <source src="upinipin.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>Figure 1: Sample embedded HTML5 video player (upinipin.mp4).</figcaption>
+    </figure>
+  </section>
+
+  <section id="register">
+    <h2>User Registration Form</h2>
+    <form action="">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label>Gender:</label>
+      <div>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </div>
+
+      <label>Favorite Hobbies:</label>
+      <div>
+        <input type="checkbox" id="coding" name="hobby" value="coding">
+        <label for="coding">Coding</label>
+        <input type="checkbox" id="reading" name="hobby" value="reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="sports" name="hobby" value="sports">
+        <label for="sports">Sports</label>
+      </div>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Web Design Lab 4. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* Global Styling */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fdfaf6;
+  color: #333333;
+}
+
+header {
+  background-color: #4a2c2a;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Navigation Bar Styling (Moved from internal CSS and extended) */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #6f4e37;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  display: inline-block;
+  background-color: #6f4e37;
+  color: #ffffff;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background-color: #e67e22;
+  color: #ffffff;
+}
+
+nav ul li a:active {
+  background-color: #c0392b;
+}
+
+/* Sections */
+section {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0d6cc;
+  border-radius: 6px;
+}
+
+.menu-item {
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px 0;
+}
+
+/* Old Price Strike-through */
+.old-price {
+  text-decoration: line-through;
+  color: #888888;
+  margin-right: 6px;
+}
+
+/* Responsive Video */
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-style: italic;
+  color: #555555;
+}
+
+/* Feedback Form Styling */
+.feedback-form {
+  background-color: #fdebd0;
+  padding: 20px;
+  border: 1px solid #e67e22;
+  border-radius: 6px;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.feedback-form input[type="submit"] {
+  background-color: #4a2c2a;
+  color: #ffffff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.feedback-form input[type="submit"]:hover {
+  background-color: #e67e22;
+}
+
+/* Footer */
+footer {
+  background-color: #4a2c2a;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 25px;
+}
+
+footer a:link {
+  color: #f9e79f;
+}
+
+footer a:visited {
+  color: #d7bde2;
+}
+
+footer a:hover {
+  color: #e67e22;
+}
+
+footer a:active {
+  color: #c0392b;
+}
