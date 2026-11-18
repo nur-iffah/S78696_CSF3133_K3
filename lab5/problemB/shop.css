@@ -1,0 +1,103 @@
+/* ===== Body: font and background image (shown once, top right) ===== */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("paper.gif");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin: 0;
+}
+
+/* ===== Header: background image, cover, white text ===== */
+header {
+    background-image: url("bookstore-header.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* ===== Headings: Merriweather (second Google Font) ===== */
+h1 {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    margin: 0 0 8px;
+}
+
+/* ===== Paragraphs ===== */
+p {
+    line-height: 1.6;
+}
+header p {
+    margin: 0;
+}
+
+/* ===== Navigation bar (dark, horizontal) ===== */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+/* Current page link */
+li a.active {
+    background-color: #04AA6D;
+}
+
+/* ===== Main content spacing ===== */
+main {
+    padding: 10px 20px;
+}
+
+/* ===== Table ===== */
+#products {
+    border-collapse: collapse;
+    width: 100%;
+}
+#products td,
+#products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+/* Grey even rows */
+#products tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* Hover effect */
+#products tr:hover {
+    background-color: #ddd;
+}
+/* Header: green, uppercase, centred, 12px top and bottom padding */
+#products th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+/* Price column (3rd column) aligned right */
+#products td:nth-child(3) {
+    text-align: right;
+}
+
+/* ===== Footer: subtle background, centred text, padding ===== */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}

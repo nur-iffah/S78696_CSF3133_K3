@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8e4f66"/>
+      <stop offset="0.55" stop-color="#d9604a"/>
+      <stop offset="1" stop-color="#f0a14a"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c5b6e"/>
+      <stop offset="1" stop-color="#0d3342"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" fill="url(#sky)"/>
+  <circle cx="900" cy="170" r="75" fill="#ffd27f"/>
+  <path d="M0 175 Q120 140 250 160 Q330 172 380 205 L380 320 L0 320 Z" fill="#12292f"/>
+  <rect y="205" width="1200" height="115" fill="url(#sea)"/>
+  <g stroke="#9fd0d8" stroke-width="2" opacity="0.7" stroke-linecap="round">
+    <line x1="380" y1="228" x2="620" y2="228"/><line x1="700" y1="240" x2="1000" y2="240"/>
+    <line x1="450" y1="258" x2="760" y2="258"/><line x1="820" y1="272" x2="1150" y2="272"/>
+    <line x1="300" y1="285" x2="560" y2="285"/><line x1="640" y1="300" x2="900" y2="300"/>
+  </g>
+  <polygon points="360,95 360,200 430,200" fill="#1c2340"/>
+  <polygon points="330,205 450,205 430,222 350,222" fill="#12182e"/>
+</svg>

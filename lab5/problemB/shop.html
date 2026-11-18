@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Bookstore</title>
+    <!-- Two Google Fonts in ONE link tag: Roboto (text) + Merriweather (headings) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<!--
+  ERRORS FOUND AND FIXED (line numbers refer to the ORIGINAL given code)
+  Error 1  (shop.html, Line 7): rel="stylesheets" is wrong. Fixed to rel="stylesheet", so shop.css is now loaded.
+  Error 2  (shop.html, Lines 10-12): a <style> block was placed inside <body>. Removed it; the rule is now in shop.css.
+  Error 3  (shop.html, Line 18): style="color=#1B4F72;" used = instead of : . Correct form is style="color: #1B4F72;"
+           (in Part 2 the title colour moved into the CSS file so the header text can be white).
+  Error 4  (shop.html, Line 20): table id="product" does not match #products in the CSS. Fixed to id="products".
+  Error 5  (shop.css, Line 2): font name 'Robotto' misspelt. Fixed to 'Roboto'.
+  Error 6  (shop.css, Line 4): background-repeat: no repeat is missing the hyphen. Fixed to no-repeat.
+  Error 7  (shop.css, Line 5): property bacground-position misspelt. Fixed to background-position.
+  Error 8  (shop.css, Line 18): li a used display: inline, so padding does not work properly. Fixed to display: block.
+  Error 9  (shop.css, Line 23): selector li:a:hover is invalid. Fixed to li a:hover.
+  Error 10 (shop.css, Line 27): border-collapse: collapsed is invalid. Fixed to collapse.
+  Error 11 (shop.css, Line 34): tr:nth-child(2) colours only row 2. Fixed to tr:nth-child(even).
+  Error 12 (shop.css, Line 37): tr:hovered is not a real pseudo-class. Fixed to tr:hover.
+  Error 13 (shop.css, Line 45): missing semicolon after background-color: #f1f1f1. Added the semicolon.
+-->
+
+    <header>
+        <h1>Campus Bookstore</h1>
+        <p>Textbooks, stationery and more for every student.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p>Browse some of our popular items below.</p>
+        <table id="products">
+            <thead>
+                <tr><th>Item</th><th>Category</th><th>Price (RM)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Web Design Basics</td><td>Textbook</td><td>45.00</td></tr>
+                <tr><td>A4 Notebook</td><td>Stationery</td><td>6.50</td></tr>
+                <tr><td>USB Drive 32GB</td><td>Gadget</td><td>25.00</td></tr>
+                <tr><td>Highlighter Set</td><td>Stationery</td><td>9.90</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer id="contact">&copy; 2026 Campus Bookstore</footer>
+</body>
+</html>

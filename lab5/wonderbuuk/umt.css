@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap');
+
+/* Body: background + font */
+body {
+    margin: 0;
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    color: #1d2b36;
+    background: linear-gradient(180deg, #e8f3f6 0%, #f9fbfc 60%);
+    line-height: 1.7;
+}
+
+/* Header */
+header {
+    background-color: #0b4f6c;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px 28px;
+}
+header h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 2.4rem;
+    margin: 0 0 8px;
+}
+.tagline {
+    margin: 0;
+    color: #cfe6ee;
+}
+
+/* Navigation bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #083a50;
+    text-align: center;
+}
+nav li {
+    display: inline-block;
+}
+nav li a {
+    display: block;
+    color: #ffffff;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: 600;
+}
+nav li a:hover {
+    background-color: #e0a526;
+    color: #083a50;
+}
+
+/* Main content: spacing + alignment */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+section {
+    margin: 30px 0;
+}
+article {
+    background-color: #ffffff;
+    padding: 24px 28px;
+    border-radius: 6px;
+    border: 1px solid #d5e3e8;
+}
+article h2 {
+    font-family: 'Lora', Georgia, serif;
+    color: #0b4f6c;
+    margin-top: 0;
+}
+article p {
+    text-align: justify;
+    margin: 0 0 14px;
+}
+
+/* Table */
+#faculties-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+#faculties-table th,
+#faculties-table td {
+    border: 1px solid #c9d9df;
+    padding: 10px;
+    text-align: left;
+}
+#faculties-table th {
+    background-color: #0b4f6c;
+    color: #ffffff;
+}
+#faculties-table tr:nth-child(even) {
+    background-color: #eef5f8;
+}
+#faculties-table tr:hover {
+    background-color: #fbeec6;
+}
+
+/* Footer */
+footer {
+    background-color: #dfe9ed;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+    color: #33474f;
+}
+footer p {
+    margin: 0;
+}
