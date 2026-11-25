@@ -2,73 +2,267 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Lab Exercises Portfolio</title>
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-light: #eef2ff;
+            --secondary: #0ea5e9;
+            --secondary-light: #e0f2fe;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-gradient: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        /* Header Card */
+        header {
+            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Section Styling */
+        .section-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Grid Layout for Links */
+        .link-grid {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 15px;
+        }
+
+        .link-grid li a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding: 16px 18px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-grid li a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: var(--primary);
+            transform: scaleY(0);
+            transition: transform 0.25s ease;
+        }
+
+        .wonderbuuk-grid li a::before {
+            background-color: var(--secondary);
+        }
+
+        /* Hover Effects */
+        .link-grid li a:hover {
+            background-color: #ffffff;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(79, 70, 229, 0.1);
+            color: var(--primary);
+        }
+
+        .wonderbuuk-grid li a:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 8px 15px rgba(14, 165, 233, 0.1);
+            color: var(--secondary);
+        }
+
+        .link-grid li a:hover::before {
+            transform: scaleY(1);
+        }
+
+        /* Lab Tag inside cards */
+        .lab-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 3px 8px;
+            border-radius: 6px;
+            width: fit-content;
+            margin-bottom: 6px;
+        }
+
+        .wonderbuuk-grid .lab-tag {
+            color: var(--secondary);
+            background: var(--secondary-light);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            .section-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Iffah's Web Design Labs</h1>
-    <h2>Matrics number: S78696</h2>
-    <p>Here are links to my completed lab exercises:</p>
 
-    <ul>
-        <li><a href="lab1/Lab1_ExerA/lab1_ExerA.html">Lab 1 - Problem A: Web Page</a></li>
-        <li><a href="lab1/lab1_ExerB.html">Lab 1 - Problem B: Fixing Errors</a></li>
-        <li><a href="Lab2/Lab2_ExerA.html">Lab 2 - Problem A: Faculty Event Page with Schedule and Registration</a></li>
-        <li><a href="Lab2/Lab2_ExerB.html">Lab 2 - Problem B: Course Feedback Page (Debugging and Extend)</a></li>
-        <li><a href="lab3/lab3_ExerA.html">Lab 3 - Problem A: Campus Bakery Online Order Page</a></li>
-        <li><a href="lab3/lab3_ExerB.html">Lab 3 - Problem B: Ticket Booking (Debugging and Extend)</a></li>
-        <li><a href="lab4/lab4_ExerA.html">Lab 4 - Problem A: Visit Terengganu - Tourism Promotion Page</a></li>
-        <li><a href="lab4/lab4_ExerB.html">Lab 4 - Problem B: e-Café Campus (Debugging and Extend)</a></li>
-        <li><a href="lab5/problemA/food.html">Lab 5 Additional - Problem A: Food Festival</a></li>
-        <li><a href="lab5/problemB/shop.html">Lab 5 Additional - Problem B: Campus Bookstore</a></li>
-        <li><a href="lab5/problemB/part1/shop.html">Lab 5 Additional - Problem B Part 1 (Errors Fixed)</a></li>
+    <div class="container">
+        <header>
+            <h1>Welcome to Iffah's Web Design Labs</h1>
+            <div class="badge">Matric Number: S78696</div>
+        </header>
 
-        <!-- Lab 6 Problems -->
-        <li><a href="lab6/problemA/lab6_ExerA.html">Lab 6 - Problem A: Rock Paper Scissors Game</a></li>
-        <li><a href="lab6/problemB/grade.html">Lab 6 - Problem B: Grade Calculator</a></li>
-    </ul>
+        <!-- Main Lab Exercises -->
+        <section class="section-card">
+            <h2 class="section-title">📂 Completed Lab Exercises</h2>
+            <ul class="link-grid">
+                <li><a href="lab1/Lab1_ExerA/lab1_ExerA.html"><span class="lab-tag">Lab 1 • Problem A</span>Web Page</a></li>
+                <li><a href="lab1/lab1_ExerB.html"><span class="lab-tag">Lab 1 • Problem B</span>Fixing Errors</a></li>
+                <li><a href="Lab2/Lab2_ExerA.html"><span class="lab-tag">Lab 2 • Problem A</span>Faculty Event Page with Schedule &amp; Registration</a></li>
+                <li><a href="Lab2/Lab2_ExerB.html"><span class="lab-tag">Lab 2 • Problem B</span>Course Feedback Page (Debugging &amp; Extend)</a></li>
+                <li><a href="lab3/lab3_ExerA.html"><span class="lab-tag">Lab 3 • Problem A</span>Campus Bakery Online Order Page</a></li>
+                <li><a href="lab3/lab3_ExerB.html"><span class="lab-tag">Lab 3 • Problem B</span>Ticket Booking (Debugging &amp; Extend)</a></li>
+                <li><a href="lab4/lab4_ExerA.html"><span class="lab-tag">Lab 4 • Problem A</span>Visit Terengganu - Tourism Promotion Page</a></li>
+                <li><a href="lab4/lab4_ExerB.html"><span class="lab-tag">Lab 4 • Problem B</span>e-Café Campus (Debugging &amp; Extend)</a></li>
+                <li><a href="lab5/problemA/food.html"><span class="lab-tag">Lab 5 • Problem A</span>Food Festival</a></li>
+                <li><a href="lab5/problemB/shop.html"><span class="lab-tag">Lab 5 • Problem B</span>Campus Bookstore</a></li>
+                <li><a href="lab5/problemB/part1/shop.html"><span class="lab-tag">Lab 5 • Problem B Part 1</span>Campus Bookstore (Errors Fixed)</a></li>
+                <li><a href="lab6/problemA/lab6_ExerA.html"><span class="lab-tag">Lab 6 • Problem A</span>Rock Paper Scissors Game</a></li>
+                <li><a href="lab6/problemB/grade.html"><span class="lab-tag">Lab 6 • Problem B</span>Grade Calculator</a></li>
+            </ul>
+        </section>
 
-    <p>Here are links to my completed Wonderbuuk Exercises:</p>
+        <!-- Wonderbuuk Exercises -->
+        <section class="section-card">
+            <h2 class="section-title">✨ Wonderbuuk Exercises</h2>
+            <ul class="link-grid wonderbuuk-grid">
+                <!-- Lab 1 Wonderbuuk -->
+                <li><a href="lab1/wonderbuuk/index.html"><span class="lab-tag">Lab 1</span>Wonderbuuk Main Page</a></li>
+                <li><a href="lab1/wonderbuuk/contact.html"><span class="lab-tag">Lab 1</span>Wonderbuuk Contact Page</a></li>
 
-    <ul>
-        <!-- Lab 1 Wonderbuuk -->
-        <li><a href="lab1/wonderbuuk/index.html">Lab 1 - Wonderbuuk Main Page</a></li>
-        <li><a href="lab1/wonderbuuk/contact.html">Lab 1 - Wonderbuuk Contact Page</a></li>
+                <!-- Lab 2 Wonderbuuk -->
+                <li><a href="Lab2/labExer_wonderbuuk.html"><span class="lab-tag">Lab 2</span>Wonderbuuk Exercises</a></li>
+                <li><a href="Lab2/Table.html"><span class="lab-tag">Lab 2</span>Wonderbuuk Table Exercise</a></li>
 
-        <!-- Lab 2 Wonderbuuk -->
-        <li><a href="Lab2/labExer_wonderbuuk.html">Lab 2 - Wonderbuuk Exercises</a></li>
-        <li><a href="Lab2/Table.html">Lab 2 - Wonderbuuk Table Exercise</a></li>
+                <!-- Lab 3 Wonderbuuk -->
+                <li><a href="lab3/wonderbuuk/block.html"><span class="lab-tag">Lab 3</span>Block &amp; Inline Elements</a></li>
+                <li><a href="lab3/wonderbuuk/div.html"><span class="lab-tag">Lab 3</span>Organizing Content with Div</a></li>
+                <li><a href="lab3/wonderbuuk/html5.html"><span class="lab-tag">Lab 3</span>HTML5 Form Input Elements</a></li>
+                <li><a href="lab3/wonderbuuk/intro5.html"><span class="lab-tag">Lab 3</span>Introduction to HTML5</a></li>
+                <li><a href="lab3/wonderbuuk/lab3.html"><span class="lab-tag">Lab 3</span>Interactive Contact Form with Calculator</a></li>
 
-        <!-- Lab 3 Wonderbuuk -->
-        <li><a href="lab3/wonderbuuk/block.html">Lab 3 - Block &amp; Inline Elements</a></li>
-        <li><a href="lab3/wonderbuuk/div.html">Lab 3 - Organizing Content with Div</a></li>
-        <li><a href="lab3/wonderbuuk/html5.html">Lab 3 - HTML5 Form Input Elements</a></li>
-        <li><a href="lab3/wonderbuuk/intro5.html">Lab 3 - Introduction to HTML5</a></li>
-        <li><a href="lab3/wonderbuuk/lab3.html">Lab 3 - Interactive Contact Form with Calculator</a></li>
+                <!-- Lab 4 Wonderbuuk -->
+                <li><a href="lab4/wonderbuuk/lab4.html"><span class="lab-tag">Lab 4</span>Responsive Webpage with HTML5 &amp; CSS</a></li>
 
-        <!-- Lab 4 Wonderbuuk -->
-        <li><a href="lab4/wonderbuuk/lab4.html">Lab 4 - Responsive Webpage with HTML5 and CSS</a></li>
+                <!-- Lab 5 Wonderbuuk -->
+                <li><a href="lab5/wonderbuuk/inline.html"><span class="lab-tag">Lab 5</span>Inline CSS</a></li>
+                <li><a href="lab5/wonderbuuk/internal.html"><span class="lab-tag">Lab 5</span>Internal CSS</a></li>
+                <li><a href="lab5/wonderbuuk/external.html"><span class="lab-tag">Lab 5</span>External CSS</a></li>
+                <li><a href="lab5/wonderbuuk/link.html"><span class="lab-tag">Lab 5</span>Link to File CSS (Google Fonts)</a></li>
+                <li><a href="lab5/wonderbuuk/bgImage.html"><span class="lab-tag">Lab 5</span>Background Image</a></li>
+                <li><a href="lab5/wonderbuuk/table.html"><span class="lab-tag">Lab 5</span>CSS Table</a></li>
+                <li><a href="lab5/wonderbuuk/navigation.html"><span class="lab-tag">Lab 5</span>CSS Navigation Bar</a></li>
+                <li><a href="lab5/wonderbuuk/umt.html"><span class="lab-tag">Lab 5</span>UMT Webpage Exercise</a></li>
 
-        <!-- Lab 5 Wonderbuuk -->
-        <li><a href="lab5/wonderbuuk/inline.html">Lab 5 - Inline CSS</a></li>
-        <li><a href="lab5/wonderbuuk/internal.html">Lab 5 - Internal CSS</a></li>
-        <li><a href="lab5/wonderbuuk/external.html">Lab 5 - External CSS</a></li>
-        <li><a href="lab5/wonderbuuk/link.html">Lab 5 - Link to File CSS (Google Fonts)</a></li>
-        <li><a href="lab5/wonderbuuk/bgImage.html">Lab 5 - Background Image</a></li>
-        <li><a href="lab5/wonderbuuk/table.html">Lab 5 - CSS Table</a></li>
-        <li><a href="lab5/wonderbuuk/navigation.html">Lab 5 - CSS Navigation Bar</a></li>
-        <li><a href="lab5/wonderbuuk/umt.html">Lab 5 - UMT Webpage Exercise</a></li>
+                <!-- Lab 6 Wonderbuuk -->
+                <li><a href="lab6/wonderbuuk/changelight.html"><span class="lab-tag">Lab 6</span>Change Light</a></li>
+                <li><a href="lab6/wonderbuuk/datetime.html"><span class="lab-tag">Lab 6</span>Date &amp; Time</a></li>
+                <li><a href="lab6/wonderbuuk/disable-right-click.html"><span class="lab-tag">Lab 6</span>Disable Right Click</a></li>
+                <li><a href="lab6/wonderbuuk/extjavascript.html"><span class="lab-tag">Lab 6</span>External JavaScript</a></li>
+                <li><a href="lab6/wonderbuuk/firstjs.html"><span class="lab-tag">Lab 6</span>First JavaScript</a></li>
+                <li><a href="lab6/wonderbuuk/form-validation.html"><span class="lab-tag">Lab 6</span>Form Validation</a></li>
+                <li><a href="lab6/wonderbuuk/guess-number.html"><span class="lab-tag">Lab 6</span>Guess Number Game</a></li>
+                <li><a href="lab6/wonderbuuk/multiplication-table.html"><span class="lab-tag">Lab 6</span>Multiplication Table</a></li>
+                <li><a href="lab6/wonderbuuk/numeric-validation.html"><span class="lab-tag">Lab 6</span>Numeric Validation</a></li>
+                <li><a href="lab6/wonderbuuk/quiz/index.html"><span class="lab-tag">Lab 6</span>Quiz App</a></li>
+            </ul>
+        </section>
 
-        <!-- Lab 6 Wonderbuuk -->
-        <li><a href="lab6/wonderbuuk/changelight.html">Lab 6 - Change Light</a></li>
-        <li><a href="lab6/wonderbuuk/datetime.html">Lab 6 - Date &amp; Time</a></li>
-        <li><a href="lab6/wonderbuuk/disable-right-click.html">Lab 6 - Disable Right Click</a></li>
-        <li><a href="lab6/wonderbuuk/extjavascript.html">Lab 6 - External JavaScript</a></li>
-        <li><a href="lab6/wonderbuuk/firstjs.html">Lab 6 - First JavaScript</a></li>
-        <li><a href="lab6/wonderbuuk/form-validation.html">Lab 6 - Form Validation</a></li>
-        <li><a href="lab6/wonderbuuk/guess-number.html">Lab 6 - Guess Number Game</a></li>
-        <li><a href="lab6/wonderbuuk/multiplication-table.html">Lab 6 - Multiplication Table</a></li>
-        <li><a href="lab6/wonderbuuk/numeric-validation.html">Lab 6 - Numeric Validation</a></li>
-        <li><a href="lab6/wonderbuuk/quiz/index.html">Lab 6 - Quiz App</a></li>
-    </ul>
+        <footer>
+            Web Design Lab Portfolio • Iffah (S78696)
+        </footer>
+    </div>
+
 </body>
 </html>
