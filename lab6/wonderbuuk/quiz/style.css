@@ -1,0 +1,81 @@
+/* ===== Page base ===== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2f5;
+    color: #2c3e50;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #1b4f72;
+    color: white;
+    text-align: center;
+    padding: 24px 20px;
+}
+header h1 { margin: 0 0 8px; }
+header p  { margin: 0; }
+
+/* ===== Main card ===== */
+main {
+    max-width: 650px;
+    margin: 24px auto;
+    padding: 0 15px;
+}
+section {
+    background-color: white;
+    border: 1px solid #d5dde3;
+    border-radius: 8px;
+    padding: 20px 24px;
+}
+.hidden { display: none; }
+
+/* ===== Question info bar (question number + timer) ===== */
+.info-bar {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #566573;
+}
+#timer { color: #1e8449; }
+#timer.low { color: #c0392b; }   /* turns red when time is almost up */
+
+/* ===== Answer options ===== */
+#options label {
+    display: block;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border: 1px solid #ccd6dd;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#options label:hover { background-color: #eaf2f8; }
+#options label.correct   { background-color: #d5f5e3; border-color: #1e8449; }
+#options label.incorrect { background-color: #fadbd8; border-color: #c0392b; }
+
+/* ===== Feedback ===== */
+#feedback {
+    font-weight: bold;
+    min-height: 1.4em;
+}
+#feedback.correct   { color: #1e8449; }
+#feedback.incorrect { color: #c0392b; }
+
+/* ===== Buttons ===== */
+button {
+    padding: 10px 22px;
+    background-color: #2e86c1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+button:hover { background-color: #1b4f72; }
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 14px;
+    font-weight: bold;
+}

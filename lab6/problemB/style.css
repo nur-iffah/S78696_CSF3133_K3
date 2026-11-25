@@ -1,0 +1,76 @@
+/* ===== Page base ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2f5;
+    color: #2c3e50;
+    padding: 15px 25px;
+}
+h2 {
+    color: #1b4f72;
+}
+
+/* ===== Form card ===== */
+form {
+    background-color: white;
+    border: 1px solid #d5dde3;
+    border-radius: 6px;
+    padding: 14px 18px;
+    width: 280px;
+}
+label {
+    font-weight: bold;
+}
+input[type="text"] {
+    width: 95%;
+    padding: 6px;
+    margin: 4px 0 12px;
+    border: 1px solid #aab7c0;
+    border-radius: 4px;
+}
+
+/* ===== Buttons with hover effect ===== */
+button {
+    padding: 8px 14px;
+    background-color: #2e86c1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #1b4f72;
+}
+
+/* ===== Result messages ===== */
+#result {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+#checkedOn {
+    font-weight: bold;
+    color: green;
+    margin-top: 2px;
+}
+
+/* ===== Grade table ===== */
+#tableContainer {
+    margin-top: 12px;
+}
+#tableContainer table {
+    border-collapse: collapse;
+    width: 260px;
+}
+#tableContainer th,
+#tableContainer td {
+    border: 1px solid #ccd6dd;
+    padding: 8px;
+    text-align: center;
+    background-color: white;
+}
+#tableContainer th {
+    background-color: #1b4f72;
+    color: white;
+}
+#tableContainer tr:hover td {
+    background-color: #fbeec6;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Development Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header that introduces the quiz -->
+    <header>
+        <h1>Web Development Quiz</h1>
+        <p>Answer each question before the timer runs out. Questions appear in a random order every time!</p>
+    </header>
+
+    <main>
+        <!-- Start section -->
+        <section id="startSection">
+            <p>Ready to test your HTML, CSS and JavaScript knowledge?</p>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </section>
+
+        <!-- Section to display the question, answer options and timer -->
+        <section id="quizSection" class="hidden">
+            <div class="info-bar">
+                <span id="questionCount"></span>
+                <span id="timer"></span>
+            </div>
+            <h2 id="questionText"></h2>
+            <div id="options"></div>
+
+            <!-- Section to show feedback (correct / incorrect) after each answer -->
+            <p id="feedback"></p>
+
+            <!-- Button to submit answers and move between questions -->
+            <button id="actionBtn" onclick="handleAction()">Submit Answer</button>
+        </section>
+    </main>
+
+    <!-- Footer displays the user's score after finishing the quiz -->
+    <footer>
+        <p id="finalScore">Finish the quiz to see your score.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
